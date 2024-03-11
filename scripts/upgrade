@@ -50,7 +50,7 @@ then
     
 	ynh_secure_remove --file="$install_dir"
 	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir="$install_dir"
+	ynh_setup_source --dest_dir="$install_dir" --full_replace=1
 	
 	# restore db backup
 	if $(ynh_compare_current_package_version --comparison gt --version "0.2.0~ynh1") 
